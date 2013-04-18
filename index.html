@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Url menu spy</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Le styles -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <style>
+            body {
+                padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+            }
+        </style>
+        <link href="css/bootstrap-responsive.css" rel="stylesheet">
+
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+          <script src="js/html5shiv.js"></script>
+        <![endif]-->
+
+        <!-- Fav and touch icons -->
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+        <link rel="shortcut icon" href="ico/favicon.png">
+    </head>
+
+    <body>
+        
+        <a href="https://github.com/bichotll/url-menu-spy"><img style="position: absolute; top: 40px; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="brand" href="#">Url menu spy</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li data-urlmenuspy="index.html(#*)$" ><a href="#">Index</a></li>
+                            <li data-urlmenuspy="#requirements$" ><a href="index.html#requirements">Requirements</a></li>
+                            <li data-urlmenuspy="#use" class='dropdown' >
+                                <a class="dropdown-toggle" data-toggle="dropdown">Use <b class="caret"></b></a>
+                                <ul class="dropdown-menu" >
+                                    <li data-urlmenuspy="#use_simple_js$" ><a href="index.html#use_simple_js">Simple javascript call</a></li>
+                                    <li data-urlmenuspy="#use_tw" ><a href="index.html#use_tw">With Twitter Bootstrap</a></li>
+                                    <li data-urlmenuspy="#use_other" ><a href="index.html#use_other">Other html</a></li>
+                                </ul>
+                            </li>
+                            <li data-urlmenuspy="#options$" ><a href="index.html#options">Options</a></li>
+                            <li data-urlmenuspy="#methods$" ><a href="index.html#methods">Methods</a></li>
+                            <li data-urlmenuspy="other_page.html$" ><a href="other_page.html"><b>Other page</b></a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <h1>Url spy menu</h1>
+            <h4>
+                A really simple jQuery (and twitter bootstrap for default) plugin to create the menu logic with your javascript.
+            </h4>
+            <h5>
+                Useful for other pages links, ajax, #urls and really fast to deploy it.
+            </h5>
+            <h6>
+                --- Trash menu logic for the client, not more for your server ---
+            </h6>
+
+            <hr><br>
+
+            <h3 id="requirements" >Requirements</h3>
+            <ul>
+                <li>jQuery</li>
+            </ul>
+            <p>
+                Please, note that the event window.onhashchange runs only in <a target="_blank" href="http://caniuse.com/hashchange" >http://caniuse.com/hashchange</a>.
+                <br>It's only for the # changes on the url.
+            </p>
+
+            <br>
+            <h3 id="use">Use</h3>
+            It's really simple, you just need to assign the data-urlspy pattern (regular expression) to the items of the menu and run the script! That's all!
+            
+            <h5 id="use_simple_js">Simple javascript call</h5>
+            <pre>
+$(document).ready( function(){
+    $.url_menu_spy();
+});            </pre>
+            
+            <h5 id="use_tw">With Twitter Bootstrap:</h5>
+            <pre>
+    &lt;ul class="nav"&gt;
+        &lt;li <b>data-urlmenuspy="index.html(#*)$"</b> &gt;&lt;a href="#"&gt;Index&lt;/a&gt;&lt;/li&gt;
+        &lt;li <b>data-urlmenuspy="#requirements$"</b> &gt;&lt;a href="#requirements"&gt;Requirements&lt;/a&gt;&lt;/li&gt;
+        ...
+    &lt;/ul&gt;            </pre>
+            
+            <h5 id='use_other'>Other html</h5>
+            <p>For other html you only need to change the <b>class_select</b> option to your change (ex: selected) and the <b>sub_element_path</b>.</p>
+
+            <br>
+            <h3 id='options'>Options</h3>
+            <code>data_urlspy_name: 'urlspy'</code> - The name of the data tag.<br><br>
+            <code>class_select: 'active'</code> - The class to assign for the menu spy item<br><br>
+            <code>sub_element_path: ''</code> - If it's assigned the script use the jQuery function <b>find()</b> to assign the class to another element according to this path.
+
+            <br><br>
+            <h3 id='methods'>Methods</h3>
+            <p>This plugin is automatic...but if you need to use this functions...</p><br>
+            <code>$.findspymenu()</code> - Find the Spymenu items and active them<br><br>
+            <code>$.clear_active()</code> - Clear all the active Spymenu items.<br><br>
+
+        </div> <!-- /container -->
+
+        <!-- Le javascript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="js/libs/jquery-1.9.0/jquery.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/urlmenuspy.min.js"></script>
+        <script>
+        $(document).ready( function(){
+            $.url_menu_spy();
+        });
+        </script>
+
+    </body>
+</html>
