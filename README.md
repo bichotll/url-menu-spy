@@ -73,3 +73,9 @@ This plugin is automatic...but if you need to use this functions...
  `$.findspymenu()` - Find the Spymenu items and active them\
 
  `$.clear_active()` - Clear all the active Spymenu items.\
+
+
+
+### More info
+
+[http://bichotll.github.com/url-menu-spy/]: http://bichotll.github.com/url-menu-spy/
