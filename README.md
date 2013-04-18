@@ -78,4 +78,4 @@ This plugin is automatic...but if you need to use this functions...
 
 ### More info
 
-[http://bichotll.github.io/url-menu-spy/][]. \
+http://bichotll.github.io/url-menu-spy/
