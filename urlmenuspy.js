@@ -1,3 +1,13 @@
+/*
+ *
+ * url-menu-spy
+ * Autor: bichotll
+ * Web-autor: bic.cat
+ * Web script: http://bichotll.github.io/url-menu-spy/
+ * Llicència Apache
+ *
+ */
+
 // jquery plugin boilerplate: http://stefangabos.ro/jquery/jquery-plugin-boilerplate-revisited/
 
 // remember to change every instance of "url_menu_spy" to the name of your plugin!
