@@ -1,0 +1,29 @@
+{
+  "name": "url-menu-spy",
+  "title": "Url menu spy",
+  "description": "A simple jQuery (and Twitter Bootstrap by default) plugin to assign the selection items of the menu when url changes",
+  "keywords": [
+    "url",
+    "twitterbootstrap",
+    "html5",
+    "mobile",
+    "menu"
+  ],
+  "version": "1.0.0",
+  "author": {
+    "name": "bichotll",
+    "url": "http://bic.cat"
+  },
+  "licenses": [
+    {
+      "type": "Apache",
+      "url": "https://github.com/bichotll/url-menu-spy/blob/master/LICENSE"
+    }
+  ],
+  "bugs": "https://github.com/bichotll/url-menu-spy/issues",
+  "homepage": "http://bichotll.github.io/url-menu-spy",
+  "download": "https://github.com/bichotll/url-menu-spy",
+  "dependencies": {
+    "jquery": ">=1.7.2"
+  }
+}
